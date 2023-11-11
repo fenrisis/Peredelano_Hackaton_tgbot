@@ -1,0 +1,33 @@
+CREATE TABLE Users (
+    userId INT AUTO_INCREMENT PRIMARY KEY,
+    role VARCHAR(255),
+    experience VARCHAR(255),
+    tech_stack VARCHAR(255),
+    idea TEXT,
+    linkedin_profile TEXT,
+    telegram_username TEXT,
+    hackathon_username TEXT
+);
+
+CREATE TABLE Teams (
+    teamId INT AUTO_INCREMENT PRIMARY KEY,
+    userId INT,
+    name VARCHAR(255),
+    idea TEXT,
+    required_roles TEXT,
+    FOREIGN KEY (userId) REFERENCES Users(userId)
+);
+
+CREATE TABLE Announcements (
+    announcementId INT AUTO_INCREMENT PRIMARY KEY,
+    message TEXT
+);
+
+CREATE TABLE Participants (
+    participantId INT AUTO_INCREMENT PRIMARY KEY,
+    userId INT,
+    teamId INT,
+    role VARCHAR(255),
+    FOREIGN KEY(userId) REFERENCES Users(userId),
+    FOREIGN KEY(teamId) REFERENCES Teams(teamId)
+);
