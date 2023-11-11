@@ -41,4 +41,5 @@ Peredelano Hackaton bot a telegram bot designed to manage hackathon participants
  
  -deleteteam - Disband a team.
         
-
+## How to run 
+- Add Procfile for Heroku and fill in the token, config, and connector.
