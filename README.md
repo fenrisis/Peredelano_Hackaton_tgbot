@@ -10,7 +10,7 @@ Peredelano Hackaton bot a telegram bot designed to manage hackathon participants
 
  -mysqlqwery.txt          # Shows mysql database schema.
 
- -.env                    # Contains Telegram bot token.
+ -.env                    # Contains Telegram bot token. You need to remove .env from gitignore to see it)
  
  -config.py               # Contains a link to send updates using a webhook.
  
