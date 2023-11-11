@@ -3,11 +3,17 @@ Peredelano Hackaton bot a telegram bot designed to manage hackathon participants
 
 ## File structure:
  -profile_handlers.py     # Contains classes for creating a member profile, a team profile and FSM states for making dynamic changes and handlers.
+ 
  -bot.py                  # Contains classes for inviting  members in team and for remove,and FSM states for making dynamic changes and handlers.
+ 
  -db.py                   # Contains mysql connector & functions for inserting, updating, deleating and more.
+
  -mysqlqwery.txt          # Shows mysql database schema.
+
  -.env                    # Contains Telegram bot token.
+ 
  -config.py               # Contains a link to send updates using a webhook.
+ 
  -requirements.txt        # Contains a description of all the necessary libraries and their versions.
 
 ## Usage
