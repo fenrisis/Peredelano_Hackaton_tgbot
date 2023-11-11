@@ -18,16 +18,27 @@ Peredelano Hackaton bot a telegram bot designed to manage hackathon participants
 
 ## Usage
  -start - start work
+ 
  -documentation - Documentation.
+ 
  -profile - Interaction with profile.
+ 
  -findteam - View existing teams.
+ 
  -team - Create a team for a hackathon.
+ 
  -editteam - Make changes to the team.
+ 
  -hireforteam - View member profiles.
+ 
  -invitetoteam - Invite a member to the team.
+ 
  -removefromteam -Remove a member from the team.
+ 
  -myteam - View current team composition.
+ 
  -leaveteam - Leave the team.
+ 
  -deleteteam - Disband a team.
         
 
