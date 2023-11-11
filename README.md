@@ -17,7 +17,7 @@ Peredelano Hackaton bot a telegram bot designed to manage hackathon participants
  -requirements.txt        # Contains a description of all the necessary libraries and their versions.
 
 ## Usage
- -/start - start work
+ -/start - start work.
  
  -/documentation - Documentation.
  
