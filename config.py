@@ -1,0 +1,1 @@
+URL_APP = 'your web app url'
