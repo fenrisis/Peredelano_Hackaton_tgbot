@@ -6,7 +6,7 @@ Peredelano Hackaton bot a telegram bot designed to manage hackathon participants
  
  -bot.py                  # Contains classes for inviting  members in team and for remove,and FSM states for making dynamic changes and handlers.
  
- -db.py                   # Contains mysql connector & functions for inserting, updating, deleating and more.
+ -db.py                   # Contains mysql connector & functions for inserting, updating, deleting and more.
 
  -mysqlqwery.txt          # Shows mysql database schema.
 
@@ -17,29 +17,29 @@ Peredelano Hackaton bot a telegram bot designed to manage hackathon participants
  -requirements.txt        # Contains a description of all the necessary libraries and their versions.
 
 ## Usage
- -start - start work
+ -/start - start work
  
- -documentation - Documentation.
+ -/documentation - Documentation.
  
- -profile - Interaction with profile.
+ -/profile - Interaction with profile.
  
- -findteam - View existing teams.
+ -/findteam - View existing teams.
  
- -team - Create a team for a hackathon.
+ -/team - Create a team for a hackathon.
  
- -editteam - Make changes to the team.
+ -/editteam - Make changes to the team.
  
- -hireforteam - View member profiles.
+ -/hireforteam - View member profiles.
  
- -invitetoteam - Invite a member to the team.
+ -/invitetoteam - Invite a member to the team.
  
- -removefromteam -Remove a member from the team.
+ -/removefromteam -Remove a member from the team.
  
- -myteam - View current team composition.
+ -/myteam - View current team composition.
  
- -leaveteam - Leave the team.
+ -/leaveteam - Leave the team.
  
- -deleteteam - Disband a team.
+ -/deleteteam - Disband a team.
         
 ## How to run 
 - Add Procfile for Heroku and fill in the token, config, and connector.
