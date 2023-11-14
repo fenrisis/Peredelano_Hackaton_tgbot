@@ -345,7 +345,8 @@ async def show_my_team(message: Message):
     # Получение данных о всех членах команды
     team_members_info = db.get_team_members_by_team_id(team_info['teamId'])
     team_members_text = "\n".join(
-        [f"{member['telegram_username']} ({member['role']})" for member in team_members_info]
+        [f"{member.get('telegram_username') or member.get('hackathon_username')} ({member['role']})"
+     for member in team_members_info]
     ) if team_members_info else "Информация о членах команды недоступна."
 
     # Отправляем сообщение пользователю
