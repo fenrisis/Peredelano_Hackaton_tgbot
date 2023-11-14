@@ -100,24 +100,36 @@ def setup_handlers(dp, bot):
  
  @dp.message_handler(state=ProfileForm.tech_stack)
  async def process_tech_stack(message: Message, state: FSMContext):
+    if message.text.startswith("/"):
+        await message.answer("Стек не может начинаться со слеша (/). Пожалуйста, введите другое название.")
+        return
     await state.update_data(tech_stack=message.text)
     await message.answer("Есть ли у вас идея для стартапа? Если да, опишите кратко:", reply_markup=ReplyKeyboardRemove())
     await ProfileForm.idea.set()
 
  @dp.message_handler(state=ProfileForm.idea)
  async def process_idea(message: Message, state: FSMContext):
+    if message.text.startswith("/"):
+        await message.answer("Идея не может начинаться со слеша (/). Пожалуйста, введите другое название.")
+        return
     await state.update_data(idea=message.text)
     await message.answer("Введите ссылку на ваш профиль LinkedIn:", reply_markup=ReplyKeyboardRemove())
     await ProfileForm.linkedin.set()
 
  @dp.message_handler(state=ProfileForm.linkedin)
  async def process_linkedin(message: Message, state: FSMContext):
+    if message.text.startswith("/"):
+        await message.answer("Ссылка на LinkedIn не может начинаться со слеша (/). Пожалуйста, введите другое название.")
+        return
     await state.update_data(linkedin_profile=message.text)
     await message.answer("Введите ваше имя пользователя для хакатона ")
     await ProfileForm.hackathon_username.set()
 
  @dp.message_handler(state=ProfileForm.hackathon_username)
  async def process_hackathon_username(message: Message, state: FSMContext):
+    if message.text.startswith("/"):
+        await message.answer("Имя пользователя для хакатона не может начинаться со слеша (/). Пожалуйста, введите другое название.")
+        return
     # Проверка, пропустил ли пользователь ввод имени пользователя для хакатона
     hackathon_username = message.text if message.text != '-' else None
     await state.update_data(hackathon_username=hackathon_username)
